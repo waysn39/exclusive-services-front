@@ -11,7 +11,7 @@
     <template v-slot:footer>
       <el-button @click="visible = false">{{ $t("cancel") }}</el-button>
       <el-button type="primary" @click="dataFormSubmitHandle()">{{ $t("confirm") }}</el-button>
-      <waysn-upload :successHandleCallback="successback" @refreshDataList="getDataList"></waysn-upload>
+      <waysn-upload :successHandleCallback="successback"></waysn-upload>
     </template>
   </el-dialog>
 </template>

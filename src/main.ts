@@ -5,6 +5,7 @@ import RenProcessRunning from "@/components/ren-process-running";
 import RenRadioGroup from "@/components/ren-radio-group";
 import RenRegionTree from "@/components/ren-region-tree";
 import RenSelect from "@/components/ren-select";
+import waysnUpload from "./components/waysn-upload";
 import ElementPlus from "element-plus";
 import { ElMessageBoxShortcutMethod } from "element-plus/lib/el-message-box/src/message-box.type";
 import { IMessage } from "element-plus/lib/el-message/src/types";
@@ -73,6 +74,7 @@ app
   .use(RenRegionTree)
   .use(RenProcessRunning)
   .use(RenProcessDetail)
+  .use(waysnUpload)
   .use(ElementPlus, { size: "small" })
   .use(VXETable)
   .use(initI18n)

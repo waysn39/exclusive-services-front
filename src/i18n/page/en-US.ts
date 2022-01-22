@@ -71,8 +71,8 @@ t.login.title = "Sign In";
 t.login.username = "Username";
 t.login.password = "Password";
 t.login.captcha = "Verification Code";
-t.login.demo = "Demo";
-t.login.copyright = "waysn";
+t.login.demo = "浙ICP备2022002334号-2";
+t.login.copyright = "hyakutake";
 
 t.home = {};
 t.home.sysInfo = {};

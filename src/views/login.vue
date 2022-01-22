@@ -40,10 +40,10 @@
     </div>
     <div class="login-footer">
       <p>
-        <a href="https://demo.waysn.com/exclusive-services" target="_blank">{{ $t("login.demo") }}</a>
+        <a href="beian.miit.gov.cn" target="_blank">{{ $t("login.demo") }}</a>
       </p>
       <p>
-        <a href="https://www.waysn.com/" target="_blank">{{ $t("ui.app.name") }}</a
+        <a href="https://www.hyakutake.icu" target="_blank">{{ $t("ui.app.name") }}</a
         >{{ year }} © {{ $t("ui.app.copyright") }}
       </p>
     </div>

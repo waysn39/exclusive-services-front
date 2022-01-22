@@ -5,7 +5,7 @@ export default {
       name: "exclusive-services",
       productName: "独家服务",
       productNameMini: "服务",
-      copyright: "waysn.com"
+      copyright: "hyakutake.icu"
     },
     setting: {
       // 右侧可视化设置窗口

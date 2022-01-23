@@ -3,7 +3,7 @@ export default {
     app: {
       //产品信息
       name: "exclusive-services",
-      productName: "独家服务",
+      productName: "何以解忧",
       productNameMini: "服务",
       copyright: "hyakutake.icu"
     },

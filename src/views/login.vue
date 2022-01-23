@@ -40,7 +40,7 @@
     </div>
     <div class="login-footer">
       <p>
-        <a href="beian.miit.gov.cn" target="_blank">{{ $t("login.demo") }}</a>
+        <a href="https://beian.miit.gov.cn" target="_blank">{{ $t("login.demo") }}</a>
       </p>
       <p>
         <a href="https://www.hyakutake.icu" target="_blank">{{ $t("ui.app.name") }}</a

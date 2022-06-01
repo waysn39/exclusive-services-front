@@ -1,3 +1,14 @@
+<template>
+  <div>
+    <div class="hidden-xs-only" @click="onClickSidebarSwitcher">
+      <svg-icon :name="state.collapseSidebar ? 'indent' : 'outdent'"></svg-icon>
+    </div>
+    <div class="hidden-sm-and-up show-xs-only" @click="onClickSidebarSwitcherByMobile">
+      <svg-icon name="icon-indent"></svg-icon>
+    </div>
+  </div>
+</template>
+
 <script lang="ts">
 import SvgIcon from "@/components/base/svg-icon";
 import { EMitt, EThemeSetting } from "@/constants/enum";
@@ -29,11 +40,3 @@ export default defineComponent({
   }
 });
 </script>
-<template>
-  <div class="hidden-xs-only" @click="onClickSidebarSwitcher">
-    <svg-icon :name="state.collapseSidebar ? 'indent' : 'outdent'"></svg-icon>
-  </div>
-  <div class="hidden-sm-and-up show-xs-only" @click="onClickSidebarSwitcherByMobile">
-    <svg-icon name="icon-indent"></svg-icon>
-  </div>
-</template>

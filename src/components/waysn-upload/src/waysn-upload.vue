@@ -1,16 +1,19 @@
+/* eslint-disable vue/no-multiple-template-root */
 <template>
-  <el-button type="primary" @click="uploadHandle()">{{ $t("oss.upload") }}</el-button>
-  <el-dialog v-model="visible" :title="$t('oss.upload')" :close-on-click-modal="false" :close-on-press-escape="false">
-    <el-upload :action="url" :file-list="fileList" drag multiple :before-upload="beforeUploadHandle" :on-success="successHandle" class="text-center">
-      <i class="el-icon-upload"></i>
-      <div class="el-upload__text" v-html="$t('upload.text')"></div>
-      <template v-slot:tip>
-        <div class="el-upload__tip">
-          {{ $t("upload.tip", { format: "jpg、png、gif" }) }}
-        </div>
-      </template>
-    </el-upload>
-  </el-dialog>
+  <div>
+    <el-button type="primary" @click="uploadHandle()">{{ $t("oss.upload") }}</el-button>
+    <el-dialog v-model="visible" :title="$t('oss.upload')" :close-on-click-modal="false" :close-on-press-escape="false">
+      <el-upload :action="url" :file-list="fileList" drag multiple :before-upload="beforeUploadHandle" :on-success="successHandle" class="text-center">
+        <i class="el-icon-upload"></i>
+        <div class="el-upload__text" v-html="$t('upload.text')"></div>
+        <template v-slot:tipex>
+          <div class="el-upload__tipex">
+            {{ $t("upload.tipex", { format: "jpg、png、gif" }) }}
+          </div>
+        </template>
+      </el-upload>
+    </el-dialog>
+  </div>
 </template>
 
 <script lang="ts">

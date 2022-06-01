@@ -1,3 +1,19 @@
+<template>
+  <div>
+    <tabs v-if="state.openTabsPage" :tabs="store.state.tabs" :activeTabName="store.state.activeTabName"></tabs>
+    <div class="rr-view-ctx">
+      <el-card shadow="never" class="rr-view-ctx-card">
+        <router-view v-slot="{ Component }">
+          <keep-alive v-if="enabledKeepAlive">
+            <component :is="Component" :key="routerKeys[$route.fullPath] || $route.fullPath" />
+          </keep-alive>
+          <component :is="Component" v-if="!enabledKeepAlive" />
+        </router-view>
+      </el-card>
+    </div>
+  </div>
+</template>
+
 <script lang="ts">
 import app from "@/constants/app";
 import { EMitt, EThemeSetting } from "@/constants/enum";
@@ -31,17 +47,3 @@ export default defineComponent({
   }
 });
 </script>
-
-<template>
-  <tabs v-if="state.openTabsPage" :tabs="store.state.tabs" :activeTabName="store.state.activeTabName"></tabs>
-  <div class="rr-view-ctx">
-    <el-card shadow="never" class="rr-view-ctx-card">
-      <router-view v-slot="{ Component }">
-        <keep-alive v-if="enabledKeepAlive">
-          <component :is="Component" :key="routerKeys[$route.fullPath] || $route.fullPath" />
-        </keep-alive>
-        <component :is="Component" v-if="!enabledKeepAlive" />
-      </router-view>
-    </el-card>
-  </div>
-</template>

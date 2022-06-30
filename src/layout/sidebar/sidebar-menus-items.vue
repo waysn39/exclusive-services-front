@@ -1,7 +1,5 @@
-/* eslint-disable vue/no-v-for-template-key */
 <template>
   <div>
-    // eslint-disable-next-line vue/no-v-for-template-key
     <template v-for="(x, index) in props.menus || []" :key="x.path">
       <el-submenu v-if="x.children && x.children.length > 0" :index="x.path" :popper-class="props.className" :class="classNames({ isMore: x.meta?.isMore })" :style="getStyle(index)">
         <template #title>
